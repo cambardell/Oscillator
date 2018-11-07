@@ -16,8 +16,6 @@ def writeToFile(wave_equation, nframes, sampling_rate, file_name):
 
     sampwidth=2
 
-    max_amplitude = 10000
-
     wav_file=wave.open(file, 'w')
 
     wav_file.setparams((nchannels, sampwidth, int(sampling_rate), nframes, comptype, compname))
@@ -27,3 +25,5 @@ def writeToFile(wave_equation, nframes, sampling_rate, file_name):
         wav_file.writeframes(struct.pack('h', int(s)))
         progress += 1
     print("done")
+
+# Explanation of what's going on, properly comment. In a notebook to document

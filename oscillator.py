@@ -2,11 +2,6 @@ import waves
 from writeToFile import writeToFile
 import matplotlib.pyplot as plt
 
-#waves.sine(440, 10)
-#waves.square(440,10)
-#waves.saw(440,5)
-#waves.tri(440,5)
-
 amp_data = waves.amp_function(10, 48000, 3, 1, 0.6, 3, 3)
 
 writeToFile(waves.sine(440, 10) * amp_data, 10*48000, 48000, "sin")
